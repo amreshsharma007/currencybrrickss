@@ -1,0 +1,76 @@
+{
+  "theme": "Light with Dark Sections",
+  "archetype": "Swiss & High-Contrast (Fintech Adaptation)",
+  "colors": {
+    "primary": "#1434cb",
+    "primary_hover": "#0f2799",
+    "accent": "#fdbb0a",
+    "accent_hover": "#e6a809",
+    "background_light": "#ffffff",
+    "background_dark": "#0a1966",
+    "surface_light": "#f8f9fc",
+    "surface_dark": "#102693",
+    "text_dark": "#050d33",
+    "text_light": "#ffffff",
+    "text_muted_light": "#64748b",
+    "text_muted_dark": "#94a3b8",
+    "border_light": "#e2e8f0",
+    "border_dark": "#1e3a8a"
+  },
+  "typography": {
+    "headings": {
+      "family": "Outfit, sans-serif",
+      "weights": ["400", "600", "700"],
+      "h1_classes": "text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none text-balance",
+      "h2_classes": "text-4xl md:text-5xl font-bold tracking-tight text-balance",
+      "h3_classes": "text-2xl md:text-3xl font-semibold tracking-tight"
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "body_classes": "text-base md:text-lg leading-relaxed"
+    }
+  },
+  "layout_spacing": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "section_padding": "py-24 md:py-32",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8"
+  },
+  "components_instructions": {
+    "nav_bar": "Sticky header with crystal glassmorphism (`backdrop-blur-xl bg-white/70`). Nav links in dark blue `#1434cb`. Accent CTA button with golden yellow `#fdbb0a` background and `#050d33` text. Minimal 1px bottom border `border-slate-200/50`.",
+    "hero_section": "Massive full-height dark section (`bg-[#1434cb]`). Use `cobe` library for the 3D globe visualization floating on the right/bottom. Floating '0.3s settlement' badges with glassmorphism `bg-white/10 backdrop-blur-md border border-white/20`. Hero typography must be pure white with `#fdbb0a` accents. Overflow hidden.",
+    "trusted_by_marquee": "Light background section. Use `react-fast-marquee`. 8-10 massive company logos using `react-icons/si` (SiShopify, SiAmazon, SiUber, SiAirbnb, SiGoogle, SiNetflix). Logos should be grayscale `text-slate-300` transitioning to `#1434cb` on hover. Generous spacing `gap-24`.",
+    "stats_section": "Light background. 4 grid columns. Massive numbers (`text-5xl md:text-6xl`) in `#1434cb`, label text below in `text-slate-600`. Use `framer-motion` for staggered entrance when in view.",
+    "platform_capabilities": "Bento grid mode. 4 cards: 2 large (col-span-12 md:col-span-8 and col-span-12 md:col-span-4), 2 small (col-span-12 md:col-span-6). Cards use 'Neumorphism tactile variant' on light background: `bg-white border border-slate-100 shadow-sm`. Hover lift `-translate-y-1` and shadow increases to `shadow-xl`. Add subtle top highlight `border-t-2 border-t-[#1434cb]` to key cards.",
+    "treasury_cross_border": "Two-column asymmetrical layout (5-col text, 7-col image). Left text, Right image. Use the provided `global_treasury_network` image with `rounded-3xl shadow-2xl overflow-hidden`. Image should have a slight parallax effect or float using framer-motion.",
+    "developer_first": "Retro-Futurism/Terminal look. Dark bento card `bg-[#050d33]` with `border border-[#1e3a8a]`. Code snippet displayed inside a mac-like terminal window with syntax highlighting colors (Pink/Yellow/Cyan on dark blue). Add a glowing beam effect on the border.",
+    "security_compliance": "4-column grid of trust badges using `lucide-react` (ShieldCheck, Lock, Globe, FileCheck). Centralized around 99.99% uptime and SOC2 compliance. High contrast geometric icons.",
+    "cta_section": "Full width banner with the `fintech_background_texture` image overlaid as a background (`bg-cover bg-center`). Overlay `bg-[#1434cb]/80` to ensure text legibility. Text in white. Golden yellow primary button (`bg-[#fdbb0a] text-[#050d33]`). Massive bold statement.",
+    "footer": "Generous spacing `py-32`. Deep blue background `#0a1966`. Grid layout for links. Big typography brand name 'UnifyBricks' at bottom in `#102693` (subtle watermark effect)."
+  },
+  "image_urls": {
+    "treasury_section": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/7cea2fbb-30e9-44e7-8198-b69be8d5e762/images/1543bbfc9f391b26ed8ac32335779e7bea4d923ef208232e387801aa6548de49.png",
+      "description": "Global treasury network abstract 3D visual",
+      "category": "treasury_cross_border"
+    },
+    "cta_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/7cea2fbb-30e9-44e7-8198-b69be8d5e762/images/fae33708a7194be0815727e80d098b28d1d09b39acea33283a6a2e5dc7bf98ea.png",
+      "description": "Fintech dark texture background",
+      "category": "cta_section_background"
+    }
+  },
+  "libraries_to_install": [
+    "lucide-react",
+    "react-icons",
+    "react-fast-marquee",
+    "framer-motion",
+    "cobe",
+    "clsx",
+    "tailwind-merge"
+  ],
+  "accessibility_testing": {
+    "data_testids": "All interactive elements (buttons, links, form inputs) must have role-based `data-testid` attributes (e.g., `data-testid=\"nav-login-button\"`, `data-testid=\"hero-cta-start\"`).",
+    "contrast": "Ensure golden yellow text is not placed on white backgrounds without sufficient contrast. Use it primarily for buttons with dark text, or on dark blue backgrounds."
+  }
+}
